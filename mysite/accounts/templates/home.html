@@ -1,0 +1,29 @@
+
+<div class="container">
+    <table class="table">
+      <thead >
+        <tr>
+          <th scope="col">Username</th>
+          <th scope="col">email</th>
+          <th scope="col">first_name</th>
+          <th scope="col">last_name</th>
+          
+        </tr>
+      </thead>  
+      {% for obj in detail %}
+      <tbody >
+        <tr>
+         <td>{{obj.username}}</td>
+         <td>{{obj.email}}</td>
+         <td>{{obj.first_name}}</td>
+         <td>{{obj.last_name}}</td>
+        
+        </tr>
+      </tbody>      
+      {% endfor %}
+    </table>
+  </div>
+ 
+  <a href="{% url 'signout' %}">
+    <button type="submit">Log Out</button>
+  </a>
